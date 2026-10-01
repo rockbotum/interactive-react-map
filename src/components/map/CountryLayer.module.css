@@ -1,0 +1,89 @@
+.country {
+  fill: #ecdfbe;
+  stroke: var(--color-border-strong);
+  stroke-width: 0.4;
+  stroke-linejoin: round;
+  outline: none;
+  transition:
+    fill 140ms ease,
+    stroke 140ms ease;
+}
+
+.country.interactive {
+  cursor: pointer;
+}
+
+.country.muted {
+  fill: #e0d2ae;
+  stroke: #b9a87e;
+}
+
+.country.matched {
+  fill: #dcc48c;
+  stroke: var(--color-gold);
+  stroke-width: 0.7;
+}
+
+.country.selected {
+  fill: #d9ae63;
+  stroke: #5c451f;
+  stroke-width: 1;
+}
+
+.country.interactive:hover {
+  fill: #dcc48c;
+  stroke: #6d5427;
+}
+
+.country.interactive:focus-visible {
+  fill: #d9ae63;
+  stroke: var(--color-focus);
+  stroke-width: 1.2;
+}
+
+/* Владения Британской империи на срез 1921 года — красная гравюрная штриховка. */
+.country.empire {
+  fill: url("#empire-hatch");
+  stroke: #7d2a1e;
+  stroke-width: 0.5;
+}
+
+.country.empire.muted {
+  fill: #ddcdae;
+  stroke: #a4906a;
+}
+
+.country.empire.matched {
+  fill: url("#empire-hatch-dense");
+  stroke: #7d2a1e;
+  stroke-width: 0.7;
+}
+
+.country.empireSelected {
+  stroke: #f3dc9f;
+  stroke-width: 1.5;
+}
+
+.country.empire.interactive:hover {
+  fill: url("#empire-hatch-dense");
+  stroke: #f3dc9f;
+  stroke-width: 0.8;
+}
+
+.labels {
+  pointer-events: none;
+}
+
+.label {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 9px;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  /* Тёмные буквы с бумажным ободком: читаются и на штриховке, и на суше. */
+  fill: #3b1c12;
+  paint-order: stroke;
+  stroke: #f7eeda;
+  stroke-width: 2.2px;
+  stroke-opacity: 0.85;
+  stroke-linejoin: round;
+}

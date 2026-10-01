@@ -1,0 +1,127 @@
+.panel {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  padding: 1rem 1.1rem 1.5rem;
+  border-radius: 3px;
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--engraved);
+  background:
+    var(--paper-grain),
+    var(--color-panel);
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.heading {
+  margin: 0;
+  font-size: 1.2rem;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.close {
+  flex: 0 0 auto;
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  border-radius: 2px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.close:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.close:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  text-align: justify;
+  hyphens: auto;
+  color: var(--color-text-muted);
+}
+
+.subheading {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  color: var(--color-empire);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.2rem;
+}
+
+.locationList {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.location {
+  display: grid;
+  gap: 0.15rem;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  border-radius: 2px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.location:hover {
+  background: var(--color-surface-hover);
+}
+
+.location:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.locationActive {
+  border-color: var(--color-empire);
+  background: var(--color-accent-soft);
+}
+
+.locationName {
+  font-size: 0.85rem;
+}
+
+.locationMeta {
+  font-size: 0.7rem;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  color: var(--color-text-dim);
+}
+
+.empty {
+  margin: 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--color-text-dim);
+}

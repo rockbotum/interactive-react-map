@@ -1,0 +1,85 @@
+.legend {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 5;
+  padding: 0.6rem 0.8rem 0.7rem;
+  border-radius: 2px;
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--engraved);
+  background:
+    var(--paper-grain),
+    var(--color-surface-translucent);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.title {
+  margin: 0 0 0.4rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.72rem;
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-empire);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.22rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.swatch {
+  width: 0.95rem;
+  height: 0.65rem;
+  flex: 0 0 auto;
+  border-radius: 1px;
+  border: 1px solid var(--color-border-strong);
+}
+
+.defaultCountry {
+  background: #ecdfbe;
+}
+
+.empireCountry {
+  background: repeating-linear-gradient(
+    45deg,
+    #8c2f22 0 1px,
+    rgba(140, 47, 34, 0.28) 1px 4px
+  );
+  border-color: #7d2a1e;
+}
+
+.mutedCountry {
+  background: #e0d2ae;
+  border-color: #b9a87e;
+}
+
+.selectedCountry {
+  background: #d9ae63;
+  border-color: #5c451f;
+}
+
+.markerDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #4a3a22;
+  border-color: #f7eeda;
+}
+
+@media (max-width: 640px) {
+  .legend {
+    display: none;
+  }
+}

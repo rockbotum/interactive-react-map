@@ -1,0 +1,123 @@
+.summary {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.flag {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.english {
+  margin: 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--color-text-dim);
+}
+
+.codes {
+  margin: 0.1rem 0 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-dim);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0;
+}
+
+/* Имперская печать: красная штриховка на бумаге, как гравюра на обороте банкноты. */
+.empire {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: 2px;
+  border: 1px solid #8c2f22;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(140, 47, 34, 0.16) 0 2px,
+      rgba(140, 47, 34, 0.04) 2px 5px
+    ),
+    var(--color-panel);
+}
+
+.empireYear {
+  margin: 0;
+  font-size: 0.66rem;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  color: var(--color-empire);
+}
+
+.empireName {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.empireStatus {
+  margin: 0;
+  font-size: 0.78rem;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  color: var(--color-empire);
+}
+
+.empireModern,
+.empireNote {
+  margin: 0;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
+
+.fact {
+  padding: 0.5rem 0.6rem;
+  border-radius: 2px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.fact dt {
+  font-size: 0.68rem;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--color-text-dim);
+}
+
+.fact dd {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  padding: 0.1rem 0.45rem;
+  border-radius: 2px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  font-size: 0.7rem;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,91 @@
+:root {
+  /* Бумага, чернила и имперская лаковая краска */
+  --color-bg: #e5d6b3;
+  --color-panel: #f2e7cd;
+  --color-surface: #ebddbd;
+  --color-surface-hover: #e0cfa6;
+  --color-surface-translucent: rgba(242, 231, 205, 0.94);
+  --color-border: #bda87f;
+  --color-border-strong: #8b7448;
+  --color-text: #2b2117;
+  --color-text-muted: #584828;
+  --color-text-dim: #6b593c;
+  --color-ocean: #c7d6d2;
+  --color-ocean-deep: #aebfba;
+  --color-empire: #8c2f22;
+  --color-empire-soft: #b5553f;
+  --color-gold: #9a7418;
+  --color-accent: #8c2f22;
+  --color-accent-soft: #eccdb8;
+  --color-focus: #1f5a86;
+
+  /* Гравюра на бумаге: тонкая рамка с белым бликом и мягкой тенью */
+  --engraved: 0 0 0 1px rgba(255, 252, 240, 0.55), 0 0 0 2px rgba(122, 98, 56, 0.28),
+    0 2px 6px rgba(74, 52, 20, 0.16);
+  --paper-grain: repeating-linear-gradient(
+    42deg,
+    rgba(126, 99, 52, 0.05) 0 1px,
+    rgba(126, 99, 52, 0) 1px 5px
+  );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 18% 8%, rgba(255, 250, 232, 0.75), transparent 48%),
+    radial-gradient(circle at 84% 78%, rgba(112, 82, 34, 0.16), transparent 55%),
+    var(--paper-grain);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia,
+    "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+.caps {
+  font-variant: small-caps;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,86 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 320px;
+  border-radius: 3px;
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--engraved);
+  background: var(--color-ocean);
+  overflow: hidden;
+}
+
+/* Лёгкая бумажная зернистость поверх моря — как след оттиска. */
+.wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 50%, transparent 55%, rgba(88, 66, 30, 0.14) 100%),
+    var(--paper-grain);
+  mix-blend-mode: multiply;
+}
+
+.map {
+  width: 100%;
+  height: auto;
+  display: block;
+  touch-action: none;
+}
+
+.sphere {
+  fill: url(#sea-wash);
+  stroke: var(--color-border-strong);
+  stroke-width: 0.7;
+}
+
+.seaLight {
+  stop-color: #d5e0da;
+  stop-opacity: 1;
+}
+
+.seaShade {
+  stop-color: #a9bdb7;
+  stop-opacity: 1;
+}
+
+.graticule {
+  fill: none;
+  stroke: #9c8760;
+  stroke-width: 0.3;
+  stroke-opacity: 0.55;
+  pointer-events: none;
+}
+
+.hatchWash {
+  fill: rgba(140, 47, 34, 0.28);
+}
+
+.hatchLine {
+  stroke: var(--color-empire);
+  stroke-width: 1.1;
+  stroke-opacity: 0.85;
+}
+
+.hatchWashDense {
+  fill: rgba(140, 47, 34, 0.52);
+}
+
+.hatchLineDense {
+  stroke: #6d2117;
+  stroke-width: 1.2;
+}
+
+.status {
+  position: absolute;
+  inset: auto 0 50% 0;
+  margin: 0;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+  pointer-events: none;
+}

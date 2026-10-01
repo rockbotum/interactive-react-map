@@ -1,0 +1,46 @@
+.layer {
+  pointer-events: none;
+}
+
+.marker {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Точка, а не гвоздь: диаметр не зависит от зума. */
+.dot {
+  r: 2.2px;
+  fill: #4a3a22;
+  stroke: #f7eeda;
+  stroke-width: 1.1;
+  transition:
+    r 120ms ease,
+    fill 120ms ease;
+}
+
+.hit {
+  r: 10px;
+  fill: transparent;
+}
+
+.marker:hover .dot {
+  r: 3.2px;
+  fill: var(--color-empire);
+}
+
+.marker:focus-visible {
+  outline: none;
+}
+
+.marker:focus-visible .dot {
+  r: 3.4px;
+  stroke: var(--color-focus);
+  stroke-width: 1.6;
+}
+
+.marker.selected .dot {
+  r: 3.4px;
+  fill: var(--color-gold);
+  stroke: #4a3a22;
+  stroke-width: 1.4;
+}
